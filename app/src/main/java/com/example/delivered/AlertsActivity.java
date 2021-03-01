@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class AlertsActivity extends AppCompatActivity {
 
-    private TextView tv_2,tv_3,tv_7,tv_8,tv_9,tv_10,btn_1,btn_2,btn_3,btn_4;
+    private TextView tv_2,tv_3,tv_7,tv_8,tv_9,tv_10,tv_11,tv_12,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6;
 
     private TextView tv_4,tv_5,tv_6;
 
@@ -38,6 +38,10 @@ public class AlertsActivity extends AppCompatActivity {
         tv_9.setTypeface(tf);
         tv_10 = findViewById(R.id.tv_10);
         tv_10.setTypeface(tf);
+        tv_11 = findViewById(R.id.tv_11);
+        tv_11.setTypeface(tf);
+        tv_12 = findViewById(R.id.tv_12);
+        tv_12.setTypeface(tf);
         btn_1 = findViewById(R.id.btn_1);
         btn_1.setTypeface(tf);
         btn_2 = findViewById(R.id.btn_2);
@@ -46,6 +50,10 @@ public class AlertsActivity extends AppCompatActivity {
         btn_3.setTypeface(tf);
         btn_4 = findViewById(R.id.btn_4);
         btn_4.setTypeface(tf);
+        btn_5 = findViewById(R.id.btn_5);
+        btn_5.setTypeface(tf);
+        btn_6 = findViewById(R.id.btn_6);
+        btn_6.setTypeface(tf);
 
         tv_4 = findViewById(R.id.tv_4);
         tv_4.setOnClickListener(new View.OnClickListener() {
