@@ -32,45 +32,52 @@
         android:paddingLeft="10dp"
         android:layout_centerHorizontal="true"/>
 
-    <TextView
-        android:id="@+id/tv_5"
+    <RelativeLayout
+        android:id="@+id/ll_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:textSize="20sp"
-        android:text="Sign up    |"
-        android:textColor="@drawable/selector"
-        android:layout_below="@id/btn_1"
-        android:drawableLeft="@mipmap/signup"
-        android:gravity="center"
-        android:layout_marginLeft="70dp"
-        android:clickable="true"/>
-    <TextView
-        android:id="@+id/tv_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:textSize="20sp"
-        android:text="Need help?"
-        android:textColor="@drawable/selector"
-        android:layout_below="@id/btn_1"
-        android:drawableLeft="@mipmap/help"
-        android:gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@id/tv_5"
-        android:clickable="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_1">
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:text="Sign up    |"
+            android:textColor="@drawable/selector"
+            android:drawableLeft="@mipmap/signup"
+            android:gravity="center"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/tv_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:text="Need help?"
+            android:textColor="@drawable/selector"
+            android:drawableLeft="@mipmap/help"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_5"
+            android:clickable="true"/>
+    </RelativeLayout>
+
 
     <TextView
         android:id="@id/tv_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_6"
+        android:layout_below="@id/ll_1"
         android:layout_marginRight="60dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:textColor="@drawable/selector"
         android:clickable="true"
+        android:layout_centerHorizontal="true"
         android:text="By signing-in you agree to DeliverED's Conditions of Use and Sale. Please click to see our Privacy Notice."/>
 
     <TextView
