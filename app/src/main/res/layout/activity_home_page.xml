@@ -131,7 +131,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="80dp"
         android:layout_marginLeft="80dp"
-        android:background="@drawable/btn_green"
+        android:background="@drawable/btn_red"
         android:layout_below="@+id/btn_2"
         android:drawableLeft="@mipmap/removedevice1"
         android:textAllCaps="false"
@@ -170,11 +170,6 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp">
         </TextView>
-
-
-
-
-
 
     </RelativeLayout>
 

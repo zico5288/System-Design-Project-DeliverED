@@ -3,37 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountActivity"
-    android:background="#D8DFEE">
+    android:background="#D8DFEE"
+    tools:context=".AccountActivity">
+
     <RelativeLayout
         android:id="@+id/rl_1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/roundviewreverse"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:background="@drawable/roundviewreverse">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/user1"
-            android:layout_marginLeft="30dp"/>
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@mipmap/user1" />
 
         <TextView
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:textSize="35sp"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="ACCOUNT"
             android:textColor="#FFFFFF"
-            android:layout_centerHorizontal="true"/>
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/setting"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/setting3"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp" />
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@mipmap/setting3" />
 
     </RelativeLayout>
 
@@ -42,67 +44,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_1"
-        android:text="Huacheng Song\ns1826390@ed.ac.uk"
-        android:textColor="#000000"
-        android:textSize="25sp"
+        android:layout_marginTop="30dp"
         android:drawableLeft="@mipmap/user2"
         android:gravity="right"
         android:padding="20dp"
-        android:layout_marginTop="30dp"/>
+        android:text="Huacheng Song\ns1826390@ed.ac.uk"
+        android:textColor="#000000"
+        android:textSize="25sp" />
 
     <View
         android:id="@+id/view_1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@id/tv_7"
-        android:background="#6C8AC9"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
-    </View>
+        android:layout_marginRight="30dp"
+        android:background="#6C8AC9"></View>
 
     <Button
         android:id="@+id/btn_1"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Edit Details"
-        android:layout_marginRight="80dp"
-        android:layout_marginLeft="80dp"
-        android:background="@drawable/btn_1"
         android:layout_below="@+id/view_1"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="30dp"
-        android:textSize="20sp"
-        android:textAllCaps="false"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/btn_1"
         android:drawableLeft="@mipmap/edit1"
-        android:paddingLeft="10dp"/>
+        android:paddingLeft="10dp"
+        android:text="Edit Details"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_2"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Log Out"
+        android:layout_below="@+id/btn_1"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="25dp"
         android:layout_marginRight="80dp"
-        android:layout_marginLeft="80dp"
-        android:background="@drawable/btn_1"
-        android:layout_below="@+id/btn_1"
-        android:textSize="20sp"
-        android:textAllCaps="false"
+        android:background="@drawable/btn_red"
         android:drawableLeft="@mipmap/logout1"
-        android:paddingLeft="10dp"/>
+        android:paddingLeft="10dp"
+        android:text="Log Out"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/roundview"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_4"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/home1"
-            android:layout_marginLeft="30dp">
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@mipmap/home1">
+
         </TextView>
 
         <TextView
@@ -112,17 +114,15 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:drawableLeft="@mipmap/alert1"
-            android:gravity="center">
-        </TextView>
+            android:gravity="center"></TextView>
 
         <TextView
             android:id="@+id/tv_6"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/here1"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp">
-        </TextView>
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@mipmap/here1"></TextView>
     </RelativeLayout>
 
 </RelativeLayout>
