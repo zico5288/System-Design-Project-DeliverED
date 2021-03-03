@@ -14,10 +14,12 @@
         android:background="@drawable/roundviewreverse">
 
         <TextView
+            android:id="@+id/account"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
             android:layout_marginLeft="30dp"
-            android:drawableLeft="@mipmap/user1" />
+            android:drawableLeft="@mipmap/user1"
+            android:transitionName="account"/>
 
         <TextView
             android:id="@+id/home"
@@ -99,30 +101,37 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_4"
+            android:id="@+id/mainpage"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
             android:layout_marginLeft="30dp"
-            android:drawableLeft="@mipmap/home1">
+            android:drawableLeft="@mipmap/home1"
+            android:transitionName="mainpage">
 
         </TextView>
 
         <TextView
-            android:id="@+id/tv_5"
+            android:id="@+id/notification"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:drawableLeft="@mipmap/alert1"
-            android:gravity="center"></TextView>
+            android:gravity="center"
+            android:transitionName="notification">
+
+        </TextView>
 
         <TextView
-            android:id="@+id/tv_6"
+            android:id="@+id/nowlocation"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
-            android:drawableLeft="@mipmap/here1"></TextView>
+            android:drawableLeft="@mipmap/here1"
+            android:transitionName="nowlocation">
+
+        </TextView>
     </RelativeLayout>
 
 </RelativeLayout>

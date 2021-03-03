@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginActivity"
     android:background="@drawable/gradient">
 
@@ -14,29 +15,30 @@
         android:layout_marginTop="120dp"
         android:layout_centerHorizontal="true"/>
 
-    <Button
-        android:id="@+id/btn_1"
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/transitionButton"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Sign in with Google"
+        android:text="LOGIN"
         android:textColor="#FFFFFF"
         android:layout_below="@id/tv_1"
         android:layout_marginTop="30dp"
-        android:textSize="18sp"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
+        android:textSize="20sp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
         android:background="@drawable/btn_1"
-        android:drawableLeft="@mipmap/google1"
         android:textAllCaps="false"
-        android:paddingLeft="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        app:defaultColor="#6C8AC9"
+        android:gravity="center"
+        app:loaderColor="#FFFFFF"/>
 
     <RelativeLayout
         android:id="@+id/ll_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/btn_1">
+        android:layout_below="@id/transitionButton">
         <TextView
             android:id="@+id/tv_5"
             android:layout_width="wrap_content"
