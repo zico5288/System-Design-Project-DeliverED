@@ -8,11 +8,11 @@
     android:background="@drawable/gradient">
 
     <TextView
-        android:id="@id/tv_1"
+        android:id="@id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@mipmap/whitelogo"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="160dp"
         android:layout_centerHorizontal="true"/>
 
     <com.royrodriguez.transitionbutton.TransitionButton
@@ -21,7 +21,7 @@
         android:layout_height="60dp"
         android:text="LOGIN"
         android:textColor="#FFFFFF"
-        android:layout_below="@id/tv_1"
+        android:layout_below="@id/text"
         android:layout_marginTop="30dp"
         android:textSize="20sp"
         android:layout_marginRight="100dp"

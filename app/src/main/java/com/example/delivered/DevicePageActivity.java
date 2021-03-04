@@ -3,6 +3,10 @@ package com.example.delivered;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +19,8 @@ public class DevicePageActivity extends AppCompatActivity {
     private TextView tv_7;
     private TextView tv_8,tv_10,tv_9,tv_11;
     private Button btn_1,btn_2;
-    private TextView tv_4,tv_5,tv_6;
+    private TextView mainpage,notification,account;
+    private TextView home,DHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,33 +65,43 @@ public class DevicePageActivity extends AppCompatActivity {
         tv_11 = findViewById(R.id.tv_11);
         tv_11.setTypeface(tf);
 
-        tv_4 = findViewById(R.id.tv_4);
-        tv_4.setOnClickListener(new View.OnClickListener() {
+        DHome = findViewById(R.id.DHome);
+        mainpage = findViewById(R.id.mainpage);
+        mainpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DevicePageActivity.this,"Navigate to Home page.",Toast.LENGTH_SHORT).show();
+                Pair pair1 = new Pair<>(mainpage, ViewCompat.getTransitionName(mainpage));
+                Pair pair2 = new Pair<>(DHome, ViewCompat.getTransitionName(DHome));
+                ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(DevicePageActivity.this, pair1, pair2);
                 Intent intent = new Intent(DevicePageActivity.this, HomePageActivity.class);
-                startActivity(intent);
+                ActivityCompat.startActivity(DevicePageActivity.this, intent, transitionActivityOptions.toBundle());
             }
         });
-        tv_5 = findViewById(R.id.tv_5);
-        tv_5.setOnClickListener(new View.OnClickListener() {
+        notification = findViewById(R.id.notification);
+        notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DevicePageActivity.this,"Navigate to Alerts page.",Toast.LENGTH_SHORT).show();
+                Pair pair1 = new Pair<>(notification, ViewCompat.getTransitionName(notification));
+                ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(DevicePageActivity.this, pair1);
                 Intent intent = new Intent(DevicePageActivity.this, AlertsActivity.class);
-                startActivity(intent);
+                ActivityCompat.startActivity(DevicePageActivity.this, intent, transitionActivityOptions.toBundle());
             }
         });
-        tv_6 = findViewById(R.id.tv_6);
-        tv_6.setOnClickListener(new View.OnClickListener() {
+
+        account = findViewById(R.id.account);
+        account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DevicePageActivity.this,"Navigate to Account page.",Toast.LENGTH_SHORT).show();
+                Pair pair1 = new Pair<>(account, ViewCompat.getTransitionName(account));
+                ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(DevicePageActivity.this, pair1);
                 Intent intent = new Intent(DevicePageActivity.this, AccountActivity.class);
-                startActivity(intent);
+                ActivityCompat.startActivity(DevicePageActivity.this, intent, transitionActivityOptions.toBundle());
             }
         });
+
+        home = findViewById(R.id.home);
+        home.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        home.setTypeface(tf);
 
 
     }

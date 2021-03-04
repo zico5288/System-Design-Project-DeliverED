@@ -21,7 +21,6 @@ public class AlertsActivity extends AppCompatActivity {
     private TextView mainpage,nowlocation,account,notification;
 
     private TextView home;
-    private TextView setting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,15 +98,6 @@ public class AlertsActivity extends AppCompatActivity {
         home = findViewById(R.id.home);
         home.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         home.setTypeface(tf);
-
-        setting = findViewById(R.id.setting);
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(AlertsActivity.this,"Setting is still building.",Toast.LENGTH_SHORT).show();
-            }
-        });
-        setting.setTypeface(tf);
 
 
     }

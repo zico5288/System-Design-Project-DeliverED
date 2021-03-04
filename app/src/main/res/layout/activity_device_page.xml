@@ -5,28 +5,39 @@
     android:layout_height="match_parent"
     tools:context=".DevicePageActivity"
     android:background="#C6D1E9">
-    
+
     <RelativeLayout
-        android:id="@+id/ll_1"
+        android:id="@+id/rl_1"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#FFFFFF">
+        android:layout_height="80dp"
+        android:background="@drawable/roundviewreverse"
+        android:layout_alignParentTop="true">
         <TextView
-            android:id="@+id/tv_1"
+            android:id="@+id/DHome"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:background="#FFFFFF"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:drawableLeft="@mipmap/logo"
+            android:layout_height="90dp"
+            android:drawableLeft="@mipmap/family"
+            android:layout_marginLeft="30dp"
+            android:transitionName="DHome"/>
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:text="DHome"
+            android:textColor="#FFFFFF"
             android:layout_centerHorizontal="true"/>
+
+
     </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ll_1"
+        android:layout_below="@id/rl_1"
         android:text="DHome \n          123456"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -129,40 +140,46 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/roundview"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_4"
+            android:id="@+id/mainpage"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
+            android:layout_marginLeft="30dp"
             android:drawableLeft="@mipmap/home1"
-            android:layout_marginLeft="30dp">
+            android:transitionName="mainpage">
+
         </TextView>
 
         <TextView
-            android:id="@+id/tv_5"
+            android:id="@+id/notification"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:drawableLeft="@mipmap/alert1"
-            android:gravity="center">
+            android:gravity="center"
+            android:transitionName="notification">
+
         </TextView>
 
         <TextView
-            android:id="@+id/tv_6"
+            android:id="@+id/account"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/user1"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp">
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@mipmap/user1"
+            android:transitionName="account">
+
         </TextView>
-
-
-
-
     </RelativeLayout>
 
+
+
+
 </RelativeLayout>
+

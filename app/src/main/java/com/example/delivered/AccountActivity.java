@@ -23,7 +23,7 @@ public class AccountActivity extends AppCompatActivity {
     private TextView mainpage,notification,nowlocation,account;
 
     private TextView home;
-    private TextView setting;
+    private Button userguide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,14 +96,14 @@ public class AccountActivity extends AppCompatActivity {
         home.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         home.setTypeface(tf);
 
-        setting = findViewById(R.id.setting);
-        setting.setOnClickListener(new View.OnClickListener() {
+        userguide = findViewById(R.id.userguide);
+        userguide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AccountActivity.this,"Setting is still building.",Toast.LENGTH_SHORT).show();
             }
         });
-        setting.setTypeface(tf);
+        userguide.setTypeface(tf);
 
     }
 }

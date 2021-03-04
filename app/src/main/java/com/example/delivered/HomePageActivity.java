@@ -20,16 +20,15 @@ public class HomePageActivity extends AppCompatActivity {
     private TextView tv_2;
     private TextView nowlocation,notification,account,mainpage;
     private TextView home;
-    private TextView setting;
 
-    private Button btn_1,btn_2,btn_3,btn_11;
+    private Button btn_1,btn_2,btn_3;
+    private Button btn_11,btn_111;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         tv_2 = findViewById(R.id.tv_2);
-        tv_2.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         AssetManager mgr = getAssets();
         Typeface tf = Typeface.createFromAsset(mgr, "ahronbd.ttf");
         tv_2.setTypeface(tf);
@@ -73,22 +72,18 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(HomePageActivity.this,"This is just an example of DHome.",Toast.LENGTH_SHORT).show();
+                Pair pair1 = new Pair<>(btn_1, ViewCompat.getTransitionName(btn_1));
+                ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(HomePageActivity.this, pair1);
                 Intent intent = new Intent(HomePageActivity.this, DevicePageActivity.class);
-                startActivity(intent);
+                ActivityCompat.startActivity(HomePageActivity.this, intent, transitionActivityOptions.toBundle());
             }
         });
         btn_1.setTypeface(tf);
 
         btn_11 = findViewById(R.id.btn_11);
-        btn_11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(HomePageActivity.this,"This is just an example of DHome.",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(HomePageActivity.this, DevicePageActivity.class);
-                startActivity(intent);
-            }
-        });
         btn_11.setTypeface(tf);
+        btn_111 = findViewById(R.id.btn_111);
+        btn_111.setTypeface(tf);
 
         btn_2 = findViewById(R.id.btn_2);
         btn_2.setOnClickListener(new View.OnClickListener() {
@@ -112,14 +107,6 @@ public class HomePageActivity extends AppCompatActivity {
         home.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         home.setTypeface(tf);
 
-        setting = findViewById(R.id.setting);
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(HomePageActivity.this,"Setting is still building.",Toast.LENGTH_SHORT).show();
-            }
-        });
-        setting.setTypeface(tf);
 
     }
 }

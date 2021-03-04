@@ -1,8 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserGuideActivity">
+    tools:context=".UserGuideActivity"
+    android:background="#C6D1E9">
 
-</RelativetLayout>
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/roundviewreverse"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/mainpage"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:drawableLeft="@mipmap/userguide1"
+            android:layout_marginLeft="30dp"
+            android:transitionName="mainpage"/>
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:text="User Guide"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/roundview"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/nowlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:drawableLeft="@mipmap/here1"
+            android:layout_marginLeft="30dp"
+            android:transitionName="nowlocation">
+        </TextView>
+
+        <TextView
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@mipmap/alert1"
+            android:gravity="center"
+            android:transitionName="notification" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:drawableLeft="@mipmap/user1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:transitionName="account">
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

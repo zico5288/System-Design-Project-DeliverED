@@ -31,13 +31,6 @@
             android:textColor="#FFFFFF"
             android:layout_centerHorizontal="true"/>
 
-        <TextView
-            android:id="@+id/setting"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:drawableLeft="@mipmap/setting3"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp" />
 
     </RelativeLayout>
 
