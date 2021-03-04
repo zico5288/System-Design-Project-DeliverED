@@ -3,50 +3,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserGuideActivity"
-    android:background="#C6D1E9">
+    android:background="#C6D1E9"
+    tools:context=".UserGuideActivity">
 
     <RelativeLayout
         android:id="@+id/rl_1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/roundviewreverse"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:background="@drawable/roundviewreverse">
+
         <TextView
-            android:id="@+id/mainpage"
+            android:id="@+id/userguide"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/userguide1"
             android:layout_marginLeft="30dp"
-            android:transitionName="mainpage"/>
+            android:drawableLeft="@mipmap/userguide1"
+            android:transitionName="userguide" />
 
         <TextView
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:textSize="35sp"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="User Guide"
             android:textColor="#FFFFFF"
-            android:layout_centerHorizontal="true"/>
-
+            android:textSize="35sp" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_1"
+        android:text="FAQS:"
+        android:textSize="22sp"
+        android:padding="0dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="30dp"
+        android:gravity="left"
+        android:layout_marginTop="30dp"/>
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_3"
+        android:background="#6C8AC9"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+    </View>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/roundview"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/nowlocation"
+            android:id="@+id/mainpage"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/here1"
             android:layout_marginLeft="30dp"
-            android:transitionName="nowlocation">
-        </TextView>
+            android:drawableLeft="@mipmap/home1"
+            android:transitionName="mainpage"></TextView>
 
         <TextView
             android:id="@+id/notification"
@@ -56,18 +78,16 @@
             android:layout_centerHorizontal="true"
             android:drawableLeft="@mipmap/alert1"
             android:gravity="center"
-            android:transitionName="notification" >
-        </TextView>
+            android:transitionName="notification"></TextView>
 
         <TextView
             android:id="@+id/account"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/user1"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
-            android:transitionName="account">
-        </TextView>
+            android:drawableLeft="@mipmap/user1"
+            android:transitionName="account"></TextView>
 
     </RelativeLayout>
 

@@ -6,8 +6,12 @@ import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextView tv_2;
     private TextView tv_3;
-    private TextView tv_5,tv_6;
+    private TextView tv_5, tv_6;
     private TransitionButton transitionButton;
 
     @Override
@@ -25,18 +29,21 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        tv_2 = findViewById(R.id.tv_2);
-//        tv_2.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+
         AssetManager mgr = getAssets();
         Typeface tf = Typeface.createFromAsset(mgr, "ahronbd.ttf");
-        tv_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(LoginActivity.this,"Privacy Notice is still building.",Toast.LENGTH_SHORT).show();
-            }
-        });
-        tv_2.setTypeface(tf);
 
+        tv_2 = findViewById(R.id.tv_2);
+
+        SpannableString ss = new SpannableString("By signing-in you agree to DeliverED's Conditions of Use and Sale. Please click to see our Privacy Notice.");
+        ss.setSpan(new URLSpan("https://group19.sdp.inf.ed.ac.uk"), 91, 105,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        tv_2.setText(ss);
+
+        tv_2.setMovementMethod(LinkMovementMethod.getInstance());
+
+        tv_2.setTypeface(tf);
 
         tv_3 = findViewById(R.id.tv_3);
         tv_3.setTypeface(tf);
@@ -44,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         tv_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this,"Sign up is still building.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Sign up is still building.", Toast.LENGTH_SHORT).show();
             }
         });
         tv_5.setTypeface(tf);
@@ -53,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         tv_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this,"User Guide is still building.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "User Guide is still building.", Toast.LENGTH_SHORT).show();
             }
         });
         tv_6.setTypeface(tf);
@@ -75,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                             transitionButton.stopAnimation(TransitionButton.StopAnimationStyle.EXPAND, new TransitionButton.OnAnimationStopEndListener() {
                                 @Override
                                 public void onAnimationStopEnd() {
-                                    Toast.makeText(LoginActivity.this,"Successfully Sign in.",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Successfully Sign in.", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getBaseContext(), HomePageActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                     LoginActivity.this.finish();
@@ -92,4 +99,7 @@ public class LoginActivity extends AppCompatActivity {
         transitionButton.setTypeface(tf);
 
     }
+
+
+
 }
