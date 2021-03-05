@@ -21,7 +21,7 @@ public class HomePageActivity extends AppCompatActivity {
     private TextView nowlocation,notification,account,mainpage;
     private TextView home;
 
-    private Button btn_1,btn_2,btn_3;
+    private Button DHome,btn_2,btn_3;
     private Button btn_11,btn_111;
 
     @Override
@@ -67,18 +67,17 @@ public class HomePageActivity extends AppCompatActivity {
         });
 
 
-        btn_1 = findViewById(R.id.btn_1);
-        btn_1.setOnClickListener(new View.OnClickListener() {
+        DHome = findViewById(R.id.DHome);
+        DHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HomePageActivity.this,"This is just an example of DHome.",Toast.LENGTH_SHORT).show();
-                Pair pair1 = new Pair<>(btn_1, ViewCompat.getTransitionName(btn_1));
+                Pair pair1 = new Pair<>(DHome, ViewCompat.getTransitionName(DHome));
                 ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(HomePageActivity.this, pair1);
                 Intent intent = new Intent(HomePageActivity.this, DevicePageActivity.class);
                 ActivityCompat.startActivity(HomePageActivity.this, intent, transitionActivityOptions.toBundle());
             }
         });
-        btn_1.setTypeface(tf);
+        DHome.setTypeface(tf);
 
         btn_11 = findViewById(R.id.btn_11);
         btn_11.setTypeface(tf);

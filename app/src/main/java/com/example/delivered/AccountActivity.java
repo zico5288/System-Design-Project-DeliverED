@@ -100,7 +100,10 @@ public class AccountActivity extends AppCompatActivity {
         userguide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(AccountActivity.this,"Setting is still building.",Toast.LENGTH_SHORT).show();
+                Pair pair1 = new Pair<>(userguide, ViewCompat.getTransitionName(userguide));
+                ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(AccountActivity.this, pair1);
+                Intent intent = new Intent(AccountActivity.this, UserGuideActivity.class);
+                ActivityCompat.startActivity(AccountActivity.this, intent, transitionActivityOptions.toBundle());
             }
         });
         userguide.setTypeface(tf);
