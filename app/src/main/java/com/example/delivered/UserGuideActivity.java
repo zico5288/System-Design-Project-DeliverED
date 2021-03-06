@@ -9,11 +9,14 @@ import android.support.v4.util.Pair;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 public class UserGuideActivity extends AppCompatActivity {
 
@@ -21,7 +24,8 @@ public class UserGuideActivity extends AppCompatActivity {
     private TextView userguide,home;
 
     private Button btn_1;
-    private TextView tv_1,tv_3,et_1;
+    private TextView tv_1,tv_3;
+    private EditText et_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,22 @@ public class UserGuideActivity extends AppCompatActivity {
         btn_1 = findViewById(R.id.btn_1);
         btn_1.setTypeface(tf);
         et_1 = findViewById(R.id.et_1);
+        et_1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Log.d("Edit Text:", s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         et_1.setTypeface(tf);
 
 

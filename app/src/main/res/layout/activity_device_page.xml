@@ -108,35 +108,49 @@
         android:textSize="25sp" />
 
 
-    <Button
-        android:id="@+id/btn_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_11"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        android:background="@drawable/btn_1"
-        android:drawableLeft="@mipmap/unlock1"
-        android:paddingLeft="10dp"
-        android:text="Open Device"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btn_2"
+
+    <RadioGroup
+        android:id="@+id/mRg1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_1"
-        android:layout_marginLeft="80dp"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_11"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="80dp"
-        android:background="@drawable/btn_1"
-        android:drawableLeft="@mipmap/lock1"
-        android:paddingLeft="10dp"
-        android:text="Lock Device"
-        android:textAllCaps="false"
-        android:textSize="18sp" />
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:id="@+id/open_device"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:text="Open Device"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/btn_radio"
+            android:drawableLeft="@mipmap/unlock1"
+            android:paddingLeft="10dp"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/lock_device"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Lock Device"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/btn_radio"
+            android:drawableLeft="@mipmap/lock1"
+            android:paddingLeft="10dp"
+            />
+    </RadioGroup>
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -40,9 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         tv_2.setText(ss);
-
         tv_2.setMovementMethod(LinkMovementMethod.getInstance());
-
         tv_2.setTypeface(tf);
 
         tv_3 = findViewById(R.id.tv_3);

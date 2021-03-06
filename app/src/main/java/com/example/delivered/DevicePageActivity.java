@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +20,8 @@ public class DevicePageActivity extends AppCompatActivity {
 
     private TextView tv_7;
     private TextView tv_8,tv_10,tv_9,tv_11;
-    private Button btn_1,btn_2;
+    private RadioGroup mRg1;
+    private RadioButton lock_device, open_device;
     private TextView mainpage,notification,account;
     private TextView home,DHome;
 
@@ -43,22 +46,19 @@ public class DevicePageActivity extends AppCompatActivity {
         tv_10 = findViewById(R.id.tv_10);
         tv_10.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         tv_10.setTypeface(tf);
-        btn_1 = findViewById(R.id.btn_1);
-        btn_1.setOnClickListener(new View.OnClickListener() {
+
+        mRg1 = findViewById(R.id.mRg1);
+        mRg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                Toast.makeText(DevicePageActivity.this,"Successfully open device!",Toast.LENGTH_SHORT).show();
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = group.findViewById(checkedId);
+                Toast.makeText(DevicePageActivity.this,radioButton.getText(),Toast.LENGTH_SHORT).show();
             }
         });
-        btn_2 = findViewById(R.id.btn_2);
-        btn_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(DevicePageActivity.this,"Successfully lock device!",Toast.LENGTH_SHORT).show();
-            }
-        });
-        btn_1.setTypeface(tf);
-        btn_2.setTypeface(tf);
+        open_device = findViewById(R.id.open_device);
+        open_device.setTypeface(tf);
+        lock_device = findViewById(R.id.lock_device);
+        lock_device.setTypeface(tf);
 
         tv_9 = findViewById(R.id.tv_9);
         tv_9.setTypeface(tf);
