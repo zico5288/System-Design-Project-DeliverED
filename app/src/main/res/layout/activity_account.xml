@@ -97,7 +97,7 @@
         android:background="@drawable/btn_1"
         android:drawableLeft="@mipmap/userguide"
         android:paddingLeft="10dp"
-        android:text="User guide"
+        android:text="User Guide"
         android:textAllCaps="false"
         android:textSize="18sp"
         android:transitionName="userguide" />
