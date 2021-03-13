@@ -13,8 +13,10 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,14 @@ public class UserGuideActivity extends AppCompatActivity {
     private TextView tv_1,tv_3;
     private EditText et_1;
 
+    private static final String[] strs = new String[] {
+        "How do I access my device?\n\nYou can...", "How do I know my parcel delivered?\n\nYou can...",
+            "How do I...\n\nYou can...", "How do I...\n\nYou can...", "How do I...\n\nYou can...",
+            "How do I...\n\nYou can...", "How do I...\n\nYou can...", "How do I...\n\nYou can..."
+    };
+    private ListView lv;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +46,9 @@ public class UserGuideActivity extends AppCompatActivity {
         AssetManager mgr = getAssets();
         Typeface tf = Typeface.createFromAsset(mgr, "ahronbd.ttf");
 
+        lv = findViewById(R.id.listview);
 
+        lv.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strs));
 
 
 
