@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class UserGuideActivity extends AppCompatActivity {
@@ -44,6 +45,13 @@ public class UserGuideActivity extends AppCompatActivity {
         tv_3 = findViewById(R.id.tv_3);
         tv_3.setTypeface(tf);
         btn_1 = findViewById(R.id.btn_1);
+        btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                et_1.setText("");
+                Toast.makeText(UserGuideActivity.this, "Thank you for your message!", Toast.LENGTH_SHORT).show();
+            }
+        });
         btn_1.setTypeface(tf);
         et_1 = findViewById(R.id.et_1);
         et_1.addTextChangedListener(new TextWatcher() {

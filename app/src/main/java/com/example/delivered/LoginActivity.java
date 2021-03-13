@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         tv_2 = findViewById(R.id.tv_2);
 
         SpannableString ss = new SpannableString("By signing-in you agree to DeliverED's Conditions of Use and Sale. Please click to see our Privacy Notice.");
-        ss.setSpan(new URLSpan("https://group19.sdp.inf.ed.ac.uk"), 91, 105,
+        ss.setSpan(new URLSpan("https://delivered-home.github.io/DeliverED-Site/#team"), 91, 105,
                 Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         tv_2.setText(ss);

@@ -96,6 +96,16 @@
         android:layout_marginLeft="30dp"
         android:gravity="left"
         android:layout_marginTop="30dp"/>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_3"
+        android:layout_above="@id/tv_1"
+        android:padding="20dp">
+
+    </ListView>
     <View
         android:id="@+id/view_1"
         android:layout_width="match_parent"
