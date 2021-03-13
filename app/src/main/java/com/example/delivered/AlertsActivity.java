@@ -1,6 +1,7 @@
 package com.example.delivered;
 
 import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
@@ -10,17 +11,30 @@ import android.support.v4.util.Pair;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AlertsActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
-    private TextView tv_2,tv_3,tv_7,tv_8,tv_9,tv_10,tv_11,tv_12,btn_1,btn_2,btn_3,btn_4,btn_5,btn_6;
+public class AlertsActivity extends AppCompatActivity{
+
+    private TextView tv_2,tv_3,tv_7,tv_8,tv_9,tv_10,tv_11,tv_12;
+    private TextView btn_1,btn_2,btn_3,btn_4,btn_5,btn_6;
+    private TextView btn_20,btn_21,tv_20,tv_21;
 
     private TextView mainpage,nowlocation,account,notification;
 
     private TextView home;
+
+    private List<Message> msgList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +43,7 @@ public class AlertsActivity extends AppCompatActivity {
 
         final AssetManager mgr = getAssets();
         Typeface tf = Typeface.createFromAsset(mgr, "ahronbd.ttf");
-
+        /*
         tv_3 = findViewById(R.id.tv_3);
         tv_3.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         tv_3.setTypeface(tf);
@@ -58,6 +72,16 @@ public class AlertsActivity extends AppCompatActivity {
         btn_5.setTypeface(tf);
         btn_6 = findViewById(R.id.btn_6);
         btn_6.setTypeface(tf);
+
+        btn_20 = findViewById(R.id.btn_20);
+        btn_20.setTypeface(tf);
+        tv_20 = findViewById(R.id.tv_20);
+        tv_20.setTypeface(tf);
+        btn_21 = findViewById(R.id.btn_21);
+        btn_21.setTypeface(tf);
+        tv_21 = findViewById(R.id.tv_21);
+        tv_21.setTypeface(tf);
+         */
 
         notification = findViewById(R.id.notification);
         mainpage = findViewById(R.id.mainpage);
@@ -99,6 +123,38 @@ public class AlertsActivity extends AppCompatActivity {
         home.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         home.setTypeface(tf);
 
+        initMsg();
 
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+        MessageAdapter adapter = new MessageAdapter(this, msgList);
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+        ItemTouchHelper.Callback callback = new ItemTouchHelperCallBack(adapter);
+        ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
+        touchHelper.attachToRecyclerView(recyclerView);
+    }
+
+    private void initMsg() {
+        Message locked = new Message("", "00:00", "Your mailbox has been locked!", getResources().getDrawable(R.mipmap.lock1), getResources().getDrawable(R.drawable.btn_1));
+        msgList.add(locked);
+        Message unlocked = new Message("", "00:00", "Your mailbox was accessed!", getResources().getDrawable(R.mipmap.key1), getResources().getDrawable(R.drawable.btn_green));
+        msgList.add(unlocked);
+        Message receivedParcel = new Message("", "00:00", "A parcel was delivered to you!", getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
+        msgList.add(receivedParcel);
+        Message full = new Message("", "00:00", "Your mailbox is full!", getResources().getDrawable(R.mipmap.fullmoon1), getResources().getDrawable(R.drawable.btn_red));
+        msgList.add(full);
+        Message lowCharge = new Message("", "00:00", "Your mailbox is low on battery!", getResources().getDrawable(R.mipmap.lowbattery1), getResources().getDrawable(R.drawable.btn_red));
+        msgList.add(lowCharge);
+        Message locationChanged = new Message("", "00:00", "Someone tried to move your mailbox!", getResources().getDrawable(R.mipmap.camera1), getResources().getDrawable(R.drawable.btn_red));
+        msgList.add(locationChanged);
+        Message connect = new Message("", "00:00", "Connected with your mailbox!", getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
+        msgList.add(connect);
+        Message disconnect = new Message("", "00:00", "Lost connection with your mailbox!", getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_red));
+        msgList.add(disconnect);
     }
 }

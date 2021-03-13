@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AlertsActivity"
-    android:background="#C6D1E9">
+    android:background="#C6D1E9"
+    android:orientation="vertical">
     <RelativeLayout
         android:id="@+id/rl_1"
         android:layout_width="match_parent"
@@ -30,8 +31,6 @@
             android:text="NOTIFICATIONS"
             android:textColor="#FFFFFF"
             android:layout_centerHorizontal="true"/>
-
-
     </RelativeLayout>
 
     <TextView
@@ -39,13 +38,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_1"
-        android:text="DHome 123456"
-        android:textSize="22sp"
-        android:padding="0dp"
-        android:textColor="#000000"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="12dp"
         android:gravity="left"
-        android:layout_marginTop="30dp"/>
+        android:padding="0dp"
+        android:text="DHome 123456"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+
     <View
         android:id="@+id/view_1"
         android:layout_width="match_parent"
@@ -55,169 +55,29 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp">
     </View>
-    <TextView
-        android:id="@+id/btn_1"
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="A parcel was delivered to you!"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_green"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view_1"
-        android:drawableLeft="@mipmap/parcel1"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingLeft="10dp"/>
-    <TextView
-        android:id="@+id/tv_7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_1"
-        android:text="13:21"
-        android:textSize="20sp"
-        android:paddingRight="40dp"
-        android:textColor="#6C8AC9"
-        android:gravity="right"/>
-    <TextView
-        android:id="@+id/btn_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your mailbox is full!"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_red"
-        android:layout_below="@+id/tv_7"
-        android:drawableLeft="@mipmap/fullmoon1"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingLeft="10dp"/>
-    <TextView
-        android:id="@+id/tv_8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_2"
-        android:text="12:19"
-        android:textSize="20sp"
-        android:paddingRight="40dp"
-        android:textColor="#6C8AC9"
-        android:gravity="right"/>
-    <TextView
-        android:id="@+id/btn_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your mailbox is low on battery!"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_red"
-        android:layout_below="@+id/tv_8"
-        android:drawableLeft="@mipmap/lowbattery1"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingLeft="10dp"/>
-    <TextView
-        android:id="@+id/tv_9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_3"
-        android:text="12:18"
-        android:textSize="20sp"
-        android:paddingRight="40dp"
-        android:textColor="#6C8AC9"
-        android:gravity="right"/>
-    <TextView
-        android:id="@+id/btn_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Someone tried to move your mailbox!"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_red"
-        android:layout_below="@+id/tv_9"
-        android:drawableLeft="@mipmap/camera1"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingLeft="10dp"/>
-    <TextView
-        android:id="@+id/tv_10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_4"
-        android:text="11:21"
-        android:textSize="20sp"
-        android:paddingRight="40dp"
-        android:textColor="#6C8AC9"
-        android:gravity="right"/>
-
-    <TextView
-        android:id="@+id/btn_5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your mailbox was accessed!"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_1"
-        android:layout_below="@+id/tv_10"
-        android:drawableLeft="@mipmap/key1"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingLeft="10dp"/>
-
-    <TextView
-        android:id="@+id/tv_11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_5"
-        android:text="10:20"
-        android:textSize="20sp"
-        android:paddingRight="40dp"
-        android:textColor="#6C8AC9"
-        android:gravity="right"/>
-    <TextView
-        android:id="@+id/btn_6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your mailbox has been locked!"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_1"
-        android:layout_below="@+id/tv_11"
-        android:drawableLeft="@mipmap/lock1"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:paddingLeft="10dp"/>
-
-    <TextView
-        android:id="@+id/tv_12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_6"
-        android:text="10:15"
-        android:textSize="20sp"
-        android:paddingRight="40dp"
-        android:textColor="#6C8AC9"
-        android:gravity="right"/>
+        android:layout_above= "@+id/rl_2"/>
 
     <RelativeLayout
+        android:id="@+id/rl_2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/roundview"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/mainpage"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/home1"
             android:layout_marginLeft="30dp"
-            android:transitionName="mainpage">
-        </TextView>
+            android:drawableLeft="@mipmap/home1"
+            android:transitionName="mainpage"></TextView>
 
         <TextView
             android:id="@+id/nowlocation"
@@ -227,17 +87,15 @@
             android:layout_centerHorizontal="true"
             android:drawableLeft="@mipmap/here1"
             android:gravity="center"
-            android:transitionName="nowlocation">
-        </TextView>
+            android:transitionName="nowlocation"></TextView>
 
         <TextView
             android:id="@+id/account"
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:drawableLeft="@mipmap/user1"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
-            android:transitionName="account">
-        </TextView>
+            android:drawableLeft="@mipmap/user1"
+            android:transitionName="account"></TextView>
     </RelativeLayout>
 </RelativeLayout>
