@@ -31,7 +31,7 @@ public class UserGuideActivity extends AppCompatActivity {
     private EditText et_1;
 
     private static final String[] strs = new String[] {
-            "How do I access my device?\n\nYou can...", "How do I know my parcel delivered?\n\nYou can...",
+        "How do I access my device?\n\nYou can...", "How do I know my parcel delivered?\n\nYou can...",
             "How do I...\n\nYou can...", "How do I...\n\nYou can...", "How do I...\n\nYou can...",
             "How do I...\n\nYou can...", "How do I...\n\nYou can...", "How do I...\n\nYou can..."
     };
