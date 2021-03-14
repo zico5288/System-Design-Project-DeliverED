@@ -85,11 +85,6 @@ public class UserGuideActivity extends AppCompatActivity {
         et_1.setTypeface(tf);
 
 
-
-
-
-
-
         userguide = findViewById(R.id.userguide);
         mainpage = findViewById(R.id.mainpage);
         mainpage.setOnClickListener(new View.OnClickListener() {

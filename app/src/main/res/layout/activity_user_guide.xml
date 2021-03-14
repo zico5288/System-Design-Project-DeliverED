@@ -108,7 +108,6 @@
         android:layout_margin="20dp"
         android:dividerHeight="15dp"
         android:divider="#FFFFFF">
-
     </ListView>
     <View
         android:id="@+id/view_1"
