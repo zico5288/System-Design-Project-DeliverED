@@ -13,9 +13,12 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class UserGuideActivity extends AppCompatActivity {
@@ -27,6 +30,14 @@ public class UserGuideActivity extends AppCompatActivity {
     private TextView tv_1,tv_3;
     private EditText et_1;
 
+    private static final String[] strs = new String[] {
+            "How do I access my device?\n\nYou can...", "How do I know my parcel delivered?\n\nYou can...",
+            "How do I...\n\nYou can...", "How do I...\n\nYou can...", "How do I...\n\nYou can...",
+            "How do I...\n\nYou can...", "How do I...\n\nYou can...", "How do I...\n\nYou can..."
+    };
+    private ListView lv;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +46,9 @@ public class UserGuideActivity extends AppCompatActivity {
         AssetManager mgr = getAssets();
         Typeface tf = Typeface.createFromAsset(mgr, "ahronbd.ttf");
 
+        lv = findViewById(R.id.listview);
 
+        lv.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strs));
 
 
 
@@ -44,6 +57,13 @@ public class UserGuideActivity extends AppCompatActivity {
         tv_3 = findViewById(R.id.tv_3);
         tv_3.setTypeface(tf);
         btn_1 = findViewById(R.id.btn_1);
+        btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                et_1.setText("");
+                Toast.makeText(UserGuideActivity.this, "Thank you for your message!", Toast.LENGTH_SHORT).show();
+            }
+        });
         btn_1.setTypeface(tf);
         et_1 = findViewById(R.id.et_1);
         et_1.addTextChangedListener(new TextWatcher() {
@@ -63,11 +83,6 @@ public class UserGuideActivity extends AppCompatActivity {
             }
         });
         et_1.setTypeface(tf);
-
-
-
-
-
 
 
         userguide = findViewById(R.id.userguide);

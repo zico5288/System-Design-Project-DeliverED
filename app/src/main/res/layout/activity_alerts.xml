@@ -33,24 +33,46 @@
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_3"
+    <LinearLayout
+        android:id="@+id/more"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rl_1"
         android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="12dp"
-        android:gravity="left"
-        android:padding="0dp"
-        android:text="DHome 123456"
-        android:textColor="#000000"
-        android:textSize="22sp" />
+        android:orientation="horizontal"
+        android:layout_below="@id/rl_1">
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:gravity="left"
+            android:padding="0dp"
+            android:text="DHome 123456"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:gravity="right"
+            android:text="manage"
+            android:layout_weight="0.5"
+            android:textSize="20sp"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
 
     <View
         android:id="@+id/view_1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_below="@id/tv_3"
+        android:layout_below="@id/more"
         android:background="#6C8AC9"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp">

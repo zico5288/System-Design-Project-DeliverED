@@ -58,13 +58,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position){
         Message msg = msgList.get(position);
-        final AssetManager mgr = context.getAssets();
-        Typeface tf = Typeface.createFromAsset(mgr, "ahronbd.ttf");
-        holder.msgContent.setTypeface(tf);
         holder.msgContent.setBackground(msg.getBackGroundDrawable());
         holder.msgContent.setCompoundDrawablesWithIntrinsicBounds(msg.getImageDrawable(),null,null,null);
         holder.msgContent.setText(msg.getContentId());
         holder.msgTime.setText(msg.getTime());
+        final AssetManager mgr = context.getAssets();
+        Typeface tf = Typeface.createFromAsset(mgr, "ahronbd.ttf");
+        holder.msgContent.setTypeface(tf);
+        holder.msgTime.setTypeface(tf);
     }
 
     @Override

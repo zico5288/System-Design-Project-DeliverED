@@ -140,21 +140,44 @@ public class AlertsActivity extends AppCompatActivity{
     }
 
     private void initMsg() {
-        Message locked = new Message("", "00:00", "Your mailbox has been locked!", getResources().getDrawable(R.mipmap.lock1), getResources().getDrawable(R.drawable.btn_1));
+        Message locked = new Message("", "00:00", "Your mailbox has been locked!",
+                getResources().getDrawable(R.mipmap.lock1), getResources().getDrawable(R.drawable.btn_1));
         msgList.add(locked);
-        Message unlocked = new Message("", "00:00", "Your mailbox was accessed!", getResources().getDrawable(R.mipmap.key1), getResources().getDrawable(R.drawable.btn_green));
+        Message unlocked = new Message("", "00:00", "Your mailbox was accessed!",
+                getResources().getDrawable(R.mipmap.key1), getResources().getDrawable(R.drawable.btn_green));
         msgList.add(unlocked);
-        Message receivedParcel = new Message("", "00:00", "A parcel was delivered to you!", getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
+        Message receivedParcel = new Message("", "00:00", "A parcel was delivered to you!",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
         msgList.add(receivedParcel);
-        Message full = new Message("", "00:00", "Your mailbox is full!", getResources().getDrawable(R.mipmap.fullmoon1), getResources().getDrawable(R.drawable.btn_red));
+        Message full = new Message("", "00:00", "Your mailbox is full!",
+                getResources().getDrawable(R.mipmap.fullmoon1), getResources().getDrawable(R.drawable.btn_red));
         msgList.add(full);
-        Message lowCharge = new Message("", "00:00", "Your mailbox is low on battery!", getResources().getDrawable(R.mipmap.lowbattery1), getResources().getDrawable(R.drawable.btn_red));
+        Message lowCharge = new Message("", "00:00", "Your mailbox is low on battery!",
+                getResources().getDrawable(R.mipmap.lowbattery1), getResources().getDrawable(R.drawable.btn_red));
         msgList.add(lowCharge);
-        Message locationChanged = new Message("", "00:00", "Someone tried to move your mailbox!", getResources().getDrawable(R.mipmap.camera1), getResources().getDrawable(R.drawable.btn_red));
+        Message locationChanged = new Message("", "00:00", "Someone tried to move your mailbox!",
+                getResources().getDrawable(R.mipmap.camera1), getResources().getDrawable(R.drawable.btn_red));
         msgList.add(locationChanged);
-        Message connect = new Message("", "00:00", "Connected with your mailbox!", getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
+        Message connect = new Message("", "00:00", "Connected with your mailbox!",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
         msgList.add(connect);
-        Message disconnect = new Message("", "00:00", "Lost connection with your mailbox!", getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_red));
+        Message disconnect = new Message("", "00:00", "Lost connection with your mailbox!",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_red));
         msgList.add(disconnect);
+        Message resetPassword = new Message("", "00:00", "Reset password successfully!",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
+        msgList.add(resetPassword);
+        Message readyUpdate = new Message("", "00:00", "Software is ready for update!",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_1));
+        msgList.add(readyUpdate);
+        Message paired = new Message("", "00:00", "Mailbox has been added to your account!",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_green));
+        msgList.add(paired);
+        Message removed = new Message("", "00:00", "Mailbox has been removed from your account",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_1));
+        msgList.add(removed);
+        Message noCharge = new Message("", "00:00", "Mailbox stops working due to low battery.",
+                getResources().getDrawable(R.mipmap.parcel1), getResources().getDrawable(R.drawable.btn_red));
+        msgList.add(noCharge);
     }
 }
